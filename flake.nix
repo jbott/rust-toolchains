@@ -43,6 +43,7 @@
         "x86_64-unknown-linux-gnu"
       ];
     in {
+      formatter = pkgs.alejandra;
       # nix shell .#{target}
       packages = lib.attrsets.genAttrs allTargets mkToolchain;
       # nix develop .#{target}
